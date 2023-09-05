@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:id="@+id/frame_layout"
+    tools:context=".activities.UserProfileActivity"
+    android:background="@color/sand">
+
+<Button
+        android:id="@+id/goBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:backgroundTint="@color/grape"
+        android:fontFamily="@font/lato_black"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        app:cornerRadius="30dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="641dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        app:cardBackgroundColor="@color/grape"
+        app:cardCornerRadius="30dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/lato_black"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="@string/driver_profile"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="@string/full_name"/>
+                <TextView
+                    android:layout_width="217dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewDriverFullName"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/customed_text"
+                    android:ems="10"
+                    android:fontFamily="@font/lato"
+                    android:textColor="@color/black"
+                    android:hint=""
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"/>
+
+                <TextView
+                    android:id="@+id/textViewDriverEmail"
+                    android:layout_width="254dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/customed_text"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/lato"
+                    android:padding="10dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="@string/car_identity_number"/>
+
+                <TextView
+                    android:id="@+id/textViewDriverCarIdentityNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:textSize="15sp"
+                    android:background="@drawable/customed_text"
+                    android:ems="10"
+                    android:fontFamily="@font/lato"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_rating"/>
+
+                <TextView
+                    android:id="@+id/textViewDriverTotalRatings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/customed_text"
+                    android:ems="10"
+                    android:fontFamily="@font/lato"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+            <RatingBar
+                android:id="@+id/driverRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:theme="@style/RatingBar"
+                android:background="@drawable/customed_text"
+                android:numStars="5"
+                android:stepSize="0.01"
+                android:isIndicator="true" />
+                <Button
+                    android:id="@+id/rateDriverButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/rate"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/lato_black"
+                    android:shadowColor="#7C2727"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/black"
+                    app:cornerRadius="30dp" />
+                </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reviewsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clipToPadding="false"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                tools:listitem="@layout/item_review"
+                android:background="@drawable/customed_text"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:padding="10dp"
+                android:overScrollMode="never"
+                android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
